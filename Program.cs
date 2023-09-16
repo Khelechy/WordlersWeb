@@ -6,8 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.Configure<AppConfig>(builder.Configuration.GetSection("AppConfig"));
 
-var port = Environment.GetEnvironmentVariable("PORT") ?? "3000";
-builder.WebHost.UseUrls($"http://*:{port}");
+// var port = Environment.GetEnvironmentVariable("PORT") ?? "3000";
+// builder.WebHost.UseUrls($"http://*:{port}");
 
 var app = builder.Build();
 
